@@ -1,0 +1,140 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #ECEFF1;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    /*overflow: hidden;*/
+    font-family: sans-serif;
+    min-height: 100vh; /* カスタムプロパティ未対応ブラウザ用のフォールバック */
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+div{
+    text-align: center;
+    transition: all 0.3s; /* トランジションを追加 */
+    height: auto;
+}
+
+#splash-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 1);
+    animation: fadeOut 1s 1s forwards;
+}
+
+
+img#icon{
+    width: 100px;
+    display: none;
+}
+
+img{
+    width: 100%;
+}
+
+
+.logo{
+    margin-top: 20px;
+}
+
+.container{
+    position: absolute;
+    background-color: white;
+    width: 90%;
+    top: 0%;
+    left: 50%; /* 画像を横方向の中央に配置 */
+    transform: translateX(-50%); /* 横方向に中央揃え */
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+header{
+    font-size: 3vw;
+}
+
+#greeting{
+    font-size: 3vw;
+}
+
+
+footer{
+    font-size: 3vw;
+font-style: italic;
+}
+
+button, input[type="submit"] {
+    font-size: 3vw;
+    background-color: #2196f3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px 5px;
+    border-radius: 4px; /* 角を丸くする */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase; /* 全てのテキストを大文字にする */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* ボタンの影を追加 */
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #3700B3;
+}
+
+form {
+    border: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#userInfo {
+    display: flex; /* flexコンテナにする */
+    justify-content: center; /* 水平方向に中央揃え */
+    align-items: center; /* 垂直方向に中央揃え */
+    height: 100%; /* 高さを100%に設定 */
+}
+
+#user-column{
+    text-align: center;
+    width: 80%; /* 幅を80%にする */
+
+}
+
+li {
+    font-size: 3vw;
+    border: none;
+    list-style-type: none; /* リストのマーカーを削除 */
+    margin: 10px 0;
+    padding: 10px;
+    background: #ECEFF1; /* 背景色を薄いグレイに */
+    border-radius: 4px; /* 角を丸くする */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* リストアイテムの影を追加 */
+}
+
+div#current-time{
+    font-size: 3vw;
+    font-weight: bold;
+}

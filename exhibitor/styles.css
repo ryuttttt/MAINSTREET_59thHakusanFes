@@ -1,0 +1,90 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ECEFF1;
+    box-sizing: border-box;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+div {
+    text-align: center;
+    transition: all 0.3s;
+    padding: 3px;
+}
+
+
+.container {
+
+    max-width: 90vw;
+    margin: 5px auto;
+    padding: 5px 5px 0;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 98vh;
+}
+
+.user-container{
+    font-size: 3vw;
+    font-weight: bold;
+    height: 100%;
+}
+
+
+#splash-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 1);
+    animation: fadeOut 1s 1s forwards;
+}
+
+#splash-image img {
+    display: block;
+    object-fit: contain;
+    margin: auto;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+button, input[type="submit"] {
+    background-color: #2196f3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #3700B3;
+}
+
+form {
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 10px;
+    background: #ECEFF1;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

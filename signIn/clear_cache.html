@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>キャッシュクリア</title>
+</head>
+<body>
+    <script>
+        // 1. サービスワーカーの登録を解除
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations()
+            .then(registrations => {
+                for (let registration of registrations) {
+                    registration.unregister()
+                    .then(success => {
+                        if (success) {
+                            console.log('Service Worker unregistered successfully:', registration);
+                        }
+                    });
+                }
+            })
+            .catch(error => {
+                console.log('Service Worker unregistration failed: ', error);
+            });
+        }
+
+        // 2. キャッシュストレージをクリア
+        caches.keys().then(function(names) {
+            for (let name of names) {
+                caches.delete(name);
+            }
+        });
+
+        // 3. ローカルストレージとセッションストレージをクリア
+        localStorage.clear();
+        sessionStorage.clear();
+
+        // 4. ログインページへリダイレクト
+        window.location.href = "./login.php";
+    </script>
+</body>
+</html>

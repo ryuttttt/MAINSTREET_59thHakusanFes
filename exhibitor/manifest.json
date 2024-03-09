@@ -1,0 +1,21 @@
+{
+    "short_name": "出展者",
+    "name": "第59回白山祭 入構管理システム MAINSTREET",
+    "icons": [
+      {
+        "src": "../images/staff.jpg",
+        "sizes": "192x192",
+        "type": "image/jpg"
+      },
+      {
+        "src": "../images/staff.jpg",
+        "sizes": "512x512",
+        "type": "image/jpg"
+      }
+    ],
+    "start_url": "../signIn/exhibitorSignin.php",
+    "display": "fullscreen",
+    "scope":"../",
+      "background_color": "#fff",
+      "theme_color": "#3f51b5"
+  }
